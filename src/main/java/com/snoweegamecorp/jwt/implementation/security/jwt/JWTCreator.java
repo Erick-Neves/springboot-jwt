@@ -10,7 +10,7 @@ public class JWTCreator {
     public static final String HEADER_AUTHORIZATION = "Authorization";
     public static final String ROLES_AUTHORITIES = "Authorities";
 
-    public final String createToken(String prefix, String key, JWTObject jwtObject){
+    public static final String createToken(String prefix, String key, JWTObject jwtObject){
         String token = Jwts.builder()
                 .setSubject(jwtObject.getSubject())
                 .setIssuedAt(jwtObject.getIssuedAt())
